@@ -1,0 +1,20 @@
+[package]
+name = "mcp-test-runner"
+version = "1.0.0"
+edition = "2021"
+authors = ["James Karanja <james.karanja@zavora.ai>"]
+description = "Test Runner MCP Server — run unit, integration, and browser tests, get coverage reports, and collect logs"
+license = "Apache-2.0"
+repository = "https://github.com/zavora-ai/mcp-test-runner"
+homepage = "https://enterprise.adk-rust.com"
+keywords = ["mcp", "testing", "test-runner", "coverage", "adk"]
+categories = ["development-tools::testing"]
+readme = "README.md"
+
+[dependencies]
+adk-mcp-sdk = "0.1"
+rmcp = { version = "1.7", features = ["server", "transport-io", "macros"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
