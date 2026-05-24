@@ -1,7 +1,7 @@
 [package]
 name = "mcp-test-runner"
-version = "1.0.0"
-edition = "2021"
+version = "1.1.0"
+edition = "2024"
 authors = ["James Karanja <james.karanja@zavora.ai>"]
 description = "Test Runner MCP Server — run unit, integration, and browser tests, get coverage reports, and collect logs"
 license = "Apache-2.0"
@@ -18,3 +18,6 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 tokio = { version = "1", features = ["full"] }
 anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+async-trait = "0.1"

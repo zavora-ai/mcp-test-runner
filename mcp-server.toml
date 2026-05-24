@@ -1,0 +1,60 @@
+server_id = "mcp_test_runner"
+display_name = "Test Runner"
+version = "1.1.0"
+domain = "developer-tools"
+sdk_version = "0.1.0"
+risk_level = "medium"
+writes_allowed = "none"
+transports = ["stdio"]
+credentials = []
+governance_gates = []
+environments = ["development", "staging"]
+
+[[tools]]
+name = "run_unit_tests"
+description = "Run unit tests — auto-detects framework (cargo test, pytest, jest, go test)"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "run_integration_tests"
+description = "Run integration tests — looks for tests/ directory or integration markers"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "run_e2e_tests"
+description = "Run browser/E2E tests (Playwright, Cypress, Selenium)"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "run_specific_tests"
+description = "Run specific tests by name — targeted regression testing"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_results"
+description = "Get results from the last test run (pass/fail counts, failed test names)"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_coverage"
+description = "Get test coverage report (cargo-tarpaulin, coverage.py, c8)"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_test_logs"
+description = "Collect test output logs, including stdout/stderr from failed tests"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
